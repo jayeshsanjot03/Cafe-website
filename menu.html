@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Café - Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Resetting default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and font styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header Styles (same as homepage) */
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: white;
+      padding-left: 20px;
+    }
+
+    header .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+
+    header .nav-links li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    header .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    header .nav-links a:hover {
+      color: #f4a261; /* Adds hover effect like the homepage */
+    }
+
+    /* Menu Page Styles */
+    .menu-page {
+      padding: 50px 20px;
+      background-color: #fff;
+      margin: 30px auto;
+      max-width: 1200px;
+      background: linear-gradient(135deg, #f4f4f4 50%, #e67e22 50%);
+      text-align: center;
+    }
+
+    .menu-page h1 {
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #333;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Category Buttons */
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .category-buttons button {
+      background-color: #333;
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .category-buttons button:hover {
+      background-color: #f4a261;
+    }
+
+    /* Menu Container */
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 20px;
+      justify-items: center;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .menu-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .menu-item h3 {
+      font-size: 24px;
+      margin: 10px 0;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .menu-item p {
+      color: #777;
+      font-size: 16px;
+    }
+
+    .menu-item .price {
+      font-size: 22px;
+      color: #f4a261;
+      font-weight: bold;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 2px solid #eee;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .menu-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .menu-item img {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-container {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-item img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (same as homepage) -->
+  <header>
+    <div class="logo">
+      <a href="index.html">Restaurant Café</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reserve</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-page">
+    <h1>Our Menu</h1>
+    
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+      <button>Appetizers</button>
+      <button>Main Course</button>
+      <button>Desserts</button>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="images/dish1.jpg" alt="Dish 1">
+        <h3>Grilled Chicken Sandwich</h3>
+        <p>A delicious grilled sandwich with fresh ingredients.</p>
+        <span class="price">Rs. 400</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/dish2.jpg" alt="Dish 2">
+        <h3>Classic Pizza</h3>
+        <p>Traditional pizza with fresh mozzarella and basil.</p>
+        <span class="price">Rs. 550</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/dish3.jpg" alt="Dish 3">
+        <h3>Veggie Salad</h3>
+        <p>A healthy mix of greens, fruits, and nuts.</p>
+        <span class="price">Rs. 100</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Restaurant Café. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

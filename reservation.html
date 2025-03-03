@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Café - Reserve</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Resetting default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and font styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header Styles (same as homepage) */
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: white;
+      padding-left: 20px;
+    }
+
+    header .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+
+    header .nav-links li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    header .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    header .nav-links a:hover {
+      color: #f4a261; /* Adds hover effect like the homepage */
+    }
+
+    /* Reserve Page Styles */
+    .reserve-page {
+      padding: 50px 20px;
+      background-color: #fff;
+      margin: 30px auto;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    .reserve-page h1 {
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #333;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Reservation Form */
+    .reservation-form {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .reservation-form label {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .reservation-form input, .reservation-form select, .reservation-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .reservation-form input[type="submit"] {
+      background-color: #f4a261;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 12px;
+      border-radius: 5px;
+      width: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .reservation-form input[type="submit"]:hover {
+      background-color: #e67e22;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (same as homepage) -->
+  <header>
+    <div class="logo">
+      <a href="index.html">Restaurant Café</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reserve</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Reservation Section -->
+  <section id="reservation" class="reserve-page">
+    <h1>Reserve a Table</h1>
+    
+    <!-- Reservation Form -->
+    <form action="#" method="post" class="reservation-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="date">Reservation Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Reservation Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Number of Guests</label>
+      <select id="guests" name="guests" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+
+      <label for="special-request">Special Requests</label>
+      <textarea id="special-request" name="special-request" rows="4" placeholder="Any special requests?"></textarea>
+
+      <input type="submit" value="Reserve Now">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Restaurant Café. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

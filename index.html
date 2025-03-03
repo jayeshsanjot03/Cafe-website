@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Café - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Resetting default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and font styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      color: rgb(255, 199, 199);
+    }
+
+    header .logo a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: white;
+      padding-left: 20px;
+    }
+
+    header .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+
+    header .nav-links li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    header .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    /* Home Page Styles */
+    #home {
+      height: 80vh;
+      background: url('images/restaurant-home.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #f2d6d6; /* Soft light pink color */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow to help with readability */
+    }
+
+    #home p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #f2d6d6; /* Soft light pink color */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle shadow for better readability */
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      background-color: #f4a261;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    /* Featured Dishes Section */
+    #featured-dishes {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      border-top: 3px solid #f4a261;
+    }
+
+    #featured-dishes h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .dishes-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .dish-item {
+      width: 30%;
+      background-color: #fff;
+      border: 2px solid #f4a261;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .dish-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .dish-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .dish-item h3 {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .dish-item p {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .dish-item .price {
+      font-size: 1.5rem;
+      color: #f4a261;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* About Section Styles */
+    #about {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Specials Section Styles */
+    #specials {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    #specials h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .specials-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .special-item {
+      width: 30%;
+      margin: 15px 0;
+      text-align: center;
+      background-color: #fff;
+      border: 2px solid #f4a261;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .special-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .special-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .special-item h3 {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .special-item p {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .special-item .price {
+      font-size: 1.5rem;
+      color: #f4a261;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Restaurant Café</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-content">
+      <h1>Welcome to Our Restaurant</h1>
+      <p>Where Every Meal is a Special Moment</p>
+      <a href="reservation.html" class="cta-button">Reserve Now</a>
+    </div>
+  </section>
+
+  <!-- Featured Dishes Section -->
+  <section id="featured-dishes" class="featured-dishes">
+    <h2>Our Special Dishes</h2>
+    <div class="dishes-container">
+      <div class="dish-item">
+        <img src="images/special1.jpg" alt="Grilled Chicken">
+        <h3>Grilled Chicken</h3>
+        <p>A mouthwatering grilled chicken served with fresh vegetables.</p>
+        <p class="price">Rs. 600</p>
+      </div>
+      <div class="dish-item">
+        <img src="images/special2.jpg" alt="Seafood Paella">
+        <h3>Seafood Paella</h3>
+        <p>A Spanish classic with the freshest seafood and saffron rice.</p>
+        <p class="price">Rs. 500</p>
+      </div>
+      <div class="dish-item">
+        <img src="images/special3.jpg" alt="Vegan Salad">
+        <h3>Vegan Salad</h3>
+        <p>Healthy and delicious mixed greens with seasonal fruits and nuts.</p>
+        <p class="price">Rs. 150</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Welcome to Restaurant Café! Our passion is to bring together people over delicious food in a cozy, inviting atmosphere. We offer a wide variety of dishes, made with fresh, locally-sourced ingredients. Whether you're here for a quick lunch or a special evening out, we promise an unforgettable dining experience.</p>
+  </section>
+
+  <!-- Specials Section -->
+  <section id="specials" class="specials">
+    <h2>Our Specials</h2>
+    <div class="specials-container">
+      <div class="special-item">
+        <img src="images/special4.jpg" alt="Special Dish 1">
+        <h3>Steamed Momos</h3>
+        <p>A mouthwatering steamed momos served with fresh chatni.</p>
+        <p class="price">Rs. 300</p>
+      </div>
+      <div class="special-item">
+        <img src="images/special5.jpg" alt="Special Dish 2">
+        <h3>Shahi Paneer</h3>
+        <p>The royal Shahi panner.</p>
+        <p class="price">Rs. 650</p>
+      </div>
+      <div class="special-item">
+        <img src="images/special6.jpg" alt="Special Dish 3">
+        <h3>Vegan Salad</h3>
+        <p>Healthy and delicious mixed greens with seasonal fruits and nuts.</p>
+        <p class="price">Rs. 200</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Restaurant Café. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

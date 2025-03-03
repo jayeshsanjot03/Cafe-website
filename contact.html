@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Restaurant Café</title>
+  <style>
+    /* Resetting default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and font styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      color: white;
+    }
+
+    header .logo a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: white;
+      padding-left: 20px;
+    }
+
+    header .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+
+    header .nav-links li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    header .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    /* Contact Page Styles */
+    #contact {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* Contact Container */
+    .contact-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    /* Contact Info Section */
+    .contact-info {
+      flex: 1;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .contact-info h3 {
+      font-size: 2rem;
+      color: #f4a261;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    /* Contact Form Section */
+    .contact-form {
+      flex: 1;
+      max-width: 500px;
+      text-align: left;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #f4a261;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e67e22;
+    }
+
+    /* Google Map Embed Styles */
+    .map-container {
+      margin-top: 40px;
+    }
+
+    .map-container iframe {
+      border: 0;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Restaurant Café</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Our Location</h3>
+        <p>Restaurant Café, Bidada, Kutch, Gujarat - 370435</p>
+        <h3>Opening Hours</h3>
+        <p>Mon-Sun: 9:00 AM - 10:00 PM</p>
+        <h3>Phone</h3>
+        <p>+91 5551234567</p>
+        <h3>Email</h3>
+        <p>info@restaurantcafe.com</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="#">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Google Map Embed -->
+    <div class="map-container">
+      <h3>Find Us on Google Maps</h3>
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Bidada,+Kutch,+Gujarat+370435" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Restaurant Café. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
